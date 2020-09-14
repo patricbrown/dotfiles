@@ -1,0 +1,93 @@
+{
+    "window.zoomLevel": 1.2,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": [ "bookmarks.toggle" ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [ "bookmarks.list" ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "after": ["<C-o>","A",";"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        {
+            "before": ["<"],
+            "commands": [ "editor.action.outdentLines"]
+        }
+    ],
+    "workbench.colorTheme": "Better Solarized Light",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "workbench.sideBar.location": "right",
+    "explorer.openEditors.visible": 0,
+    "workbench.settings.editor": "json",
+    "workbench.activityBar.visible": true,
+    "workbench.iconTheme": "material-icon-theme",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "yaml.customTags": [
+      "!And",
+      "!If",
+      "!Not",
+      "!Or",
+      "!FindInMap sequence",
+      "!Base64",
+      "!Cidr",
+      "!Ref",
+      "!Sub",
+      "!GetAtt",
+      "!GetAZs",
+      "!ImportValue",
+      "!Select",
+      "!Select sequence",
+      "!Join sequence",
+      "!Equals sequence",
+      "!Split sequence"
+    ],
+   "bracket-pair-colorizer-2.colors": [
+     "DarkGoldenRod",
+     "#2aa198",
+     "DarkBlue",
+   ] 
+}
