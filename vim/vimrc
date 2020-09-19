@@ -127,10 +127,10 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""
-"" call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " yaml-vim plugin
-"" Plug 'mrk21/yaml-vim'
+Plug 'mrk21/yaml-vim'
 
 " initialize plugin system
-"" call plug#end()
+call plug#end()
