@@ -1,124 +1,135 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+    "vim.leader": ",",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<leader>","a"],
+            "after": ["<C-o>", "A", ";"]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinitionAside"]
+        },
+        {
+            "before": ["g", "p", "d"],
+            "commands": ["editor.action.peekDefinition"]
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["g", "p", "i"],
+            "commands": ["editor.action.peekImplementation"]
+        },
+        {
+            "before": ["g", "q" ],
+            "commands": ["editor.action.aiQuickFix"]
+        },
+        {
+            "before": ["g", "r" ],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            "before": ["g", "t" ],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        {
+            "before": ["g", "p", "t" ],
+            "commands": ["editor.action.peekTypeDefinition"]
+        },
+        {
+            "before": ["<leader>", "e" ],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before":["<C-n>"],
+            "commands": [
+                ":nohl",
+            ]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { 
+            "before": ["<leader>", "s", "b"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        { 
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.explorer.fileView.focus"]
+        },
+
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [ ">"],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        {
+            "before": ["<"],
+            "commands": [ "editor.action.outdentLines" ]
+        }
+    ],
+    "editor.detectIndentation": true,
+    "editor.formatOnPaste": true,
+    "editor.insertSpaces": true,
+    "editor.lineNumbers": "on",        
+    "editor.minimap.enabled": false,
+    "editor.rulers": [ 80, 120 ],
+    "editor.tabSize": 2,
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "explorer.openEditors.visible": 1, 
+    "window.zoomLevel": 2,
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.editor.enablePreview": false,
+    "workbench.settings.editor": "json",
+    "svelte.enable-ts-plugin": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.formatOnSave": false
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.formatOnSave": false
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+    "[python]": {
+        "editor.tabSize": 4,
     },
-    "editor.formatOnSave": false
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "bracket-pair-colorizer-2.colors": ["DarkGoldenRod", "#2aa198", "DarkBlue"],
-
-  "editor.autoIndent": "full",
-  "editor.codeLens": false,
-  "editor.cursorBlinking": "solid",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorStyle": "line",
-  "editor.fontSize": 16,
-  "editor.fontFamily": "Inconsolata",
-  "editor.fontLigatures": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": false,
-  "editor.formatOnSave": true,
-  "editor.letterSpacing": 0.5,
-  "editor.lineHeight": 25,
-  "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.suggestSelection": "first",
-  "editor.tabCompletion": "on",
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-
-  "explorer.openEditors.visible": 0,
-
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "files.defaultLanguage": "",
-  "files.hotExit": "onExit",
-  "files.trimTrailingWhitespace": true,
-
-  "prettier.printWidth": 120,
-  "prettier.bracketSpacing": true,
-  "prettier.singleQuote": true,
-
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+    "vim.easymotion": true,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
     },
-    {
-      "before": ["<leader>", "a"],
-      "after": ["<C-o>", "A", ";"]
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<leader>", "m"],
-      "commands": ["bookmarks.toggle"]
-    },
-    {
-      "before": ["<leader>", "b"],
-      "commands": ["bookmarks.list"]
-    }
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
-    },
-    {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
-    }
-  ],
-
-  "window.zoomLevel": 1.2,
-
-  "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Better Solarized Light",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.settings.editor": "json",
-  "workbench.sideBar.location": "right",
-
-  "yaml.customTags": [
-    "!And",
-    "!If",
-    "!Not",
-    "!Or",
-    "!FindInMap sequence",
-    "!Base64",
-    "!Cidr",
-    "!Ref",
-    "!Sub",
-    "!GetAtt",
-    "!GetAZs",
-    "!ImportValue",
-    "!Select",
-    "!Select sequence",
-    "!Join sequence",
-    "!Equals sequence",
-    "!Split sequence"
-  ],
-  "yaml.format.enable": true
+    "vim.smartRelativeLine": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+    "vim.highlightedyank.duration": 250,
+    "editor.cursorSurroundingLines": 8,
+    "git.openRepositoryInParentFolders": "never",
 }
