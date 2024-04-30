@@ -1,5 +1,5 @@
 {
-    "vim.leader": ",",
+    "vim.leader": "\\",
     "vim.insertModeKeyBindings": [
         {
             "before": ["j","k"],
@@ -77,11 +77,11 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        { 
+        {
             "before": ["<leader>", "s", "b"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
-        { 
+        {
             "before": ["<leader>", "e"],
             "commands": ["workbench.explorer.fileView.focus"]
         },
@@ -97,27 +97,65 @@
             "commands": [ "editor.action.outdentLines" ]
         }
     ],
+    "editor.autoIndent": "full",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 8,
     "editor.detectIndentation": true,
+    "editor.fontSize": 16,
     "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
     "editor.insertSpaces": true,
-    "editor.lineNumbers": "on",        
+    "editor.lineNumbers": "on",
     "editor.minimap.enabled": false,
     "editor.rulers": [ 80, 120 ],
+    "editor.letterSpacing": 0.5,
+    "editor.lineHeight": 25,
+    "editor.tabCompletion": "on",
     "editor.tabSize": 2,
     "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "explorer.openEditors.visible": 1, 
-    "window.zoomLevel": 2,
+    "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 1,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.defaultLanguage": "",
+    "files.hotExit": "onExit",
+    "files.trimTrailingWhitespace": true,
+    "prettier.bracketSpacing": true,
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+
+
+    "window.zoomLevel": 1.2,
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.enablePreview": false,
     "workbench.settings.editor": "json",
-    "svelte.enable-ts-plugin": true,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
         "editor.maxTokenizationLineLength": 2500,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint":"always"
+        },
+        "editor.formatOnSave": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+        "source.fixAll.eslint":"always"
+    },
+        "editor.formatOnSave": false
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint":"always"
+        },
+        "editor.formatOnSave": false
     },
     "[python]": {
         "editor.tabSize": 4,
@@ -130,6 +168,6 @@
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
     "vim.highlightedyank.duration": 250,
-    "editor.cursorSurroundingLines": 8,
+
     "git.openRepositoryInParentFolders": "never",
 }
